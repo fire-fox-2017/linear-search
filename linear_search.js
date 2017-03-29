@@ -41,6 +41,9 @@ let banana_arr = "banana".split("");
 console.log(globalLinearSearch("a", banana_arr));
 // [ 1, 3, 5 ]
 
+console.log(globalLinearSearch("z", banana_arr));
+
+
 module.exports = {
   linearSearch,
   globalLinearSearch
