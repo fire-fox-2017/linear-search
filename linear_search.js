@@ -1,29 +1,41 @@
 'use strict'
 
-// Release 0
-console.log("Linear Search")
-let linearSearch = (target, values) => {
-  //write your code here
+
+let linearSearch = (num,arr) =>{
+	let jumlah=0;
+	for(let i=0;i<arr.length;i++){
+		if(arr[i]===num){
+			jumlah ++;
+		}
+
+	}
+
+	if(jumlah==0){
+	return -1
+	}else{
+	return jumlah;
+	}
+	
 }
 
-let random_numbers = [ 6, 29, 18, 2, 72, 19, 18, 10, 37 ];
+let random_arr = [5,4,2,6,4,3,7,4,2,];
 
-console.log(linearSearch(18, random_numbers));
-// 2
-console.log(linearSearch(9, random_numbers));
-// -1
+console.log(linearSearch (1,random_arr));
 
-// Release 1
-console.log("Global Linear Search")
-let globalLinearSearch = (target, values) => {
-  //write your code here
-}
 
 let banana_arr = "banana".split("");
-// ["b", "a", "n", "a", "n", "a"]
-console.log(globalLinearSearch("a", banana_arr));
-// [ 1, 3, 5 ]
 
+let globalLinearSearch = (char,arr) =>{
+	let tempChar = [];
+	for(let i=0;i<=arr.length;i++){
+		if(char===arr[i]){
+			tempChar.push(i);
+		}
+	}
+return tempChar;
+}
+
+console.log(globalLinearSearch('a',banana_arr));
 module.exports = {
   linearSearch,
   globalLinearSearch
