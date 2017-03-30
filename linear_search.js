@@ -5,24 +5,27 @@ console.log("Linear Search")
 let linearSearch = (target, values) => {
   //write your code here
 
-  let angka = 0;
+  let indeks = 0;
   for(let i = 0; i < values.length; i++){
     if(target === values[i]){
-      angka++;
+      indeks = i;
+      break;
+    } else {
+      indeks = null;
     }
   }
 
-  if(angka !== 0){
-    return angka;
-  } else {
+  if(indeks === null){
     return -1;
+  } else {
+    return indeks;
   }
-
+//cari index, yg paling pertama
 }
 
 let random_numbers = [ 6, 29, 18, 2, 72, 19, 18, 10, 37 ];
 
-console.log(linearSearch(18, random_numbers));
+console.log(linearSearch(72, random_numbers));
 // 2
 console.log(linearSearch(9, random_numbers));
 // -1
@@ -54,4 +57,3 @@ module.exports = {
   linearSearch,
   globalLinearSearch
 }
-
