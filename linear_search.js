@@ -3,10 +3,20 @@
 // Release 0
 console.log("Linear Search")
 let linearSearch = (target, values) => {
-  //write your code here
+  let num = 0;
+
+  for (var i = 0; i < values.length; i++) {
+    if (target == values[i]) {
+      num = i
+      break
+    } else {
+      num = -1
+    }
+  }
+  return num
 }
 
-let random_numbers = [ 6, 29, 18, 2, 72, 19, 18, 10, 37 ];
+let random_numbers = [6, 29, 18, 2, 72, 19, 18, 10, 37];
 
 console.log(linearSearch(18, random_numbers));
 // 2
