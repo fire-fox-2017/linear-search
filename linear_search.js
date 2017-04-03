@@ -2,25 +2,22 @@
 
 
 let linearSearch = (num,arr) =>{
-	let jumlah=0;
+	let nilai=0;
 	for(let i=0;i<arr.length;i++){
 		if(arr[i]===num){
-			jumlah ++;
+			return i;
 		}
-
 	}
-
-	if(jumlah==0){
 	return -1
-	}else{
-	return jumlah;
-	}
-	
+
 }
 
-let random_arr = [5,4,2,6,4,3,7,4,2,];
 
-console.log(linearSearch (1,random_arr));
+let random_arr2= [6,29,18,2,72,19,18,10,37];
+
+console.log(linearSearch (18,random_arr2));
+console.log(linearSearch (9,random_arr2));
+console.log(linearSearch (72,random_arr2));
 
 
 let banana_arr = "banana".split("");
